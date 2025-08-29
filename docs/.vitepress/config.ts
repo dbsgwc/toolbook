@@ -9,6 +9,7 @@ export default defineConfig({
     siteTitle: 'ToolBook',
     nav: [
       { text: '首页', link: '/' },
+      { text: '技术选型', link: '/guide/stack' },
       { text: 'PM2', link: '/tools/pm2' },
       { text: 'Docker', link: '/tools/docker' },
       { text: 'NVM', link: '/tools/nvm' },
@@ -27,7 +28,8 @@ export default defineConfig({
         {
           text: '开始',
           items: [
-            { text: '简介', link: '/' }
+            { text: '简介', link: '/' },
+            { text: '技术选型', link: '/guide/stack' }
           ]
         }
       ]

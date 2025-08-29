@@ -13,6 +13,10 @@ title: ToolBook
 ## 快速导航
 
 <div class="home-cards">
+  <a class="home-card" href="/guide/stack">
+    <h3>技术选型</h3>
+    <p>技术选型清单</p>
+  </a>
   <a class="home-card" href="/tools/pm2">
     <h3>PM2</h3>
     <p>进程守护与零停机部署</p>
