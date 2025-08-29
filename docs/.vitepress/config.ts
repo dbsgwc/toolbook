@@ -1,6 +1,9 @@
 import { defineConfig } from 'vitepress'
 
+const base = process.env.VITEPRESS_BASE || '/'
+
 export default defineConfig({
+  base,
   title: 'ToolBook',
   description: '命令速查小册 · pm2 / docker / nvm 等常用工具命令与实践',
   lang: 'zh-CN',

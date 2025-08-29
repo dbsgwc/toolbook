@@ -23,7 +23,7 @@ jobs:
         run: npm i
 
       - name: Build
-        run: npm run docs:build
+        run: VITEPRESS_BASE=/ npm run docs:build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
@@ -31,5 +31,7 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: docs/.vitepress/dist
           cname: toolbook.wat.ink
+
+          
 
 
