@@ -34,6 +34,73 @@ docker info
 | `docker stop <c>` | 停止容器 | `docker stop web` |
 | `docker rm <c>` | 删除容器 | `docker rm web` |
 
+### 文件与拷贝（容器 -> 宿主机）
+
+```bash
+# 复制单个文件到当前目录
+docker cp web:/etc/nginx/nginx.conf .
+
+# 复制目录到宿主机指定目录（会在目标目录下创建同名子目录）
+docker cp web:/var/log/nginx ./logs
+
+# 仅复制目录内容（避免额外的子目录层级）
+docker cp web:/var/log/nginx/. ./logs
+```
+
+大目录/保留权限更稳妥的方式（tar 流复制）：
+
+- Linux / macOS
+```bash
+docker exec web sh -c "cd /data && tar czf - ." | tar xzf - -C ./data_backup
+```
+
+- Windows PowerShell
+```powershell
+docker exec web sh -c "cd /data && tar czf - ." | tar -xzf - -C .\data_backup
+```
+
+注意：
+- 源路径以 `/.` 结尾表示复制目录“内容”，否则会复制目录本身。
+- `web` 可以替换为容器 ID。
+
+### 文件与拷贝（宿主机 -> 容器）
+
+```bash
+# 复制单个文件到容器内指定路径（目标路径需可写）
+docker cp ./nginx.conf web:/etc/nginx/nginx.conf
+
+# 复制整个目录到容器；保留目录名
+docker cp ./configs web:/etc/nginx
+
+# 仅复制目录内容（不多包一层目录）
+docker cp ./configs/. web:/etc/nginx
+```
+
+大目录/权限控制（tar 流方式）：
+
+- Linux / macOS
+```bash
+tar czf - -C ./data . | docker exec -i web sh -c "mkdir -p /data && tar xzf - -C /data"
+```
+
+- Windows PowerShell
+```powershell
+tar -czf - -C .\data . | docker exec -i web sh -c "mkdir -p /data && tar -xzf - -C /data"
+```
+
+拷贝后如需修正属主/权限，可在容器内执行：
+
+```bash
+docker exec web sh -c "chown -R nginx:nginx /etc/nginx && chmod -R go-w /etc/nginx"
+```
+
+常见报错与处理：
+- Read-only file system：目标目录只读。改为写入 `/tmp` 或启动时挂载可写卷后再移动。
+- No such file or directory：先 `mkdir -p` 目标目录：`docker exec web mkdir -p /etc/nginx/conf.d`。
+- 权限不足：以 root 执行（`docker exec -u 0 ...`），或拷贝至可写目录后再容器内 `sudo mv`。
+- Windows 路径/转义：PowerShell 里注意反斜杠与引号，必要时使用 WSL 或 Git Bash。
+- 需要持久化：优先使用命名卷/绑定挂载，而非频繁 `docker cp`。
+
 ## 网络与数据
 
 ```bash
