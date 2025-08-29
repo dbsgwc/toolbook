@@ -29,7 +29,7 @@ jobs:
         run: npm ci
 
       - name: Build
-        run: VITEPRESS_BASE=/toolbook npm run docs:build
+        run: VITEPRESS_BASE=/toolbook/ npm run docs:build
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
