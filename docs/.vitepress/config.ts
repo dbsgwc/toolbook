@@ -41,11 +41,11 @@ export default defineConfig({
       copyright: '© 2025 ToolBook'
     },
     editLink: {
-      pattern: 'https://github.com/your-username/your-repo/edit/main/docs/:path',
+      pattern: 'https://github.com/dbsgwc/toolbook/edit/main/docs/:path',
       text: '在 GitHub 上编辑此页'
     },
     socialLinks: [
-      { icon: 'github', link: 'https://github.com/your-username/your-repo' }
+      { icon: 'github', link: 'https://github.com/dbsgwc/toolbook' }
     ]
   },
   head: [

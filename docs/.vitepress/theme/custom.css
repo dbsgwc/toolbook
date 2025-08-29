@@ -1,0 +1,33 @@
+.home-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 16px;
+  margin: 24px 0 8px;
+}
+
+.home-card {
+  border: 1px solid var(--vp-c-divider);
+  border-radius: 12px;
+  padding: 16px;
+  background: var(--vp-c-bg-soft);
+  transition: border-color 0.2s ease, transform 0.1s ease, background 0.2s ease;
+}
+
+.home-card:hover {
+  border-color: var(--vp-c-brand-1);
+  transform: translateY(-2px);
+  background: var(--vp-c-bg);
+}
+
+.home-card h3 {
+  margin: 0 0 8px;
+  font-size: 16px;
+}
+
+.home-card p {
+  margin: 0;
+  color: var(--vp-c-text-2);
+  font-size: 13px;
+}
+
+

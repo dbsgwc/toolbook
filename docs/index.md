@@ -10,33 +10,36 @@ title: ToolBook
 - 高频场景：安装 / 常用 / 排障 / 最佳实践
 - 支持站内本地搜索与暗黑模式
 
-## 快速开始
+## 快速导航
 
-- PM2: [/tools/pm2](/tools/pm2)
-- Docker: [/tools/docker](/tools/docker)
-- NVM: [/tools/nvm](/tools/nvm)
-- Git: [/tools/git](/tools/git)
-- PNPM: [/tools/pnpm](/tools/pnpm)
-
-## 如何使用
-
-- 顶部导航或下方列表进入对应工具页
-- 使用右上角搜索输入命令或关键词
-- 表格可直接复制命令；遇到问题看“常见场景/排障”
-
-## 目录
-
-- 工具
-  - [PM2](/tools/pm2)
-  - [Docker](/tools/docker)
-  - [NVM](/tools/nvm)
-  - [Git](/tools/git)
-  - [PNPM](/tools/pnpm)
+<div class="home-cards">
+  <a class="home-card" href="/tools/pm2">
+    <h3>PM2</h3>
+    <p>进程守护与零停机部署</p>
+  </a>
+  <a class="home-card" href="/tools/docker">
+    <h3>Docker</h3>
+    <p>容器构建与运行</p>
+  </a>
+  <a class="home-card" href="/tools/nvm">
+    <h3>NVM</h3>
+    <p>Node 版本管理</p>
+  </a>
+  <a class="home-card" href="/tools/git">
+    <h3>Git</h3>
+    <p>版本控制常用命令</p>
+  </a>
+  <a class="home-card" href="/tools/pnpm">
+    <h3>PNPM</h3>
+    <p>快速高效的包管理器</p>
+  </a>
+</div>
 
 ## 最近更新
 
-- 新增：Git 速查、PNPM 速查
-- 调整：移除部署页面，保留 GitHub Pages 自动发布
+- 最近提交时间自动生成：
+
+<RecentList />
 
 > 域名：`toolbook.wat.ink`
 
