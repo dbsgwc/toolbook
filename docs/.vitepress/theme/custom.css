@@ -31,3 +31,25 @@
 }
 
 
+.friend-links {
+  margin: 16px;
+  padding-top: 12px;
+  border-top: 1px solid var(--vp-c-divider);
+  text-align: center;
+}
+
+.friend-label {
+  margin-right: 8px;
+  color: var(--vp-c-text-2);
+}
+
+.friend-links a {
+  color: var(--vp-c-brand-1);
+  text-decoration: none;
+}
+
+.friend-links a:hover {
+  text-decoration: underline;
+}
+
+
