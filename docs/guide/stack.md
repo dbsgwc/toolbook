@@ -60,8 +60,13 @@ title: 技术选型清单
   - 适用：企业内部通讯、社交应用
   - 替代：环信/融云（SaaS，昂贵）、GoEasy（轻量 PaaS）
 
+## 数据大屏 / 可视化
+- **DataV (Vue)**：Vue 专属大屏组件库
+  - 适用：快速搭建数据驾驶舱、监控大屏
+  - 推荐搭配：**ECharts**（图表内核）、**Three.js**（3D 场景）
+
 ## 快速决策建议
-- 后台管理：vben
+- 后台管理系统：vben
 - 小程序：uni-app（unibest）
 - H5：Tailwind（或 uni-app H5 若需复用）
 - 后端服务：Gin（单体）、Go-Zero（微服务）
@@ -71,5 +76,6 @@ title: 技术选型清单
 - 镜像仓库：Harbor
 - 容器编排：Kubernetes
 - 即时通讯：OpenIM
+- 大屏可视化：DataV + ECharts
 
 
