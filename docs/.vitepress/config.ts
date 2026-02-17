@@ -17,7 +17,8 @@ export default defineConfig({
       { text: 'Docker', link: '/tools/docker' },
       { text: 'NVM', link: '/tools/nvm' },
       { text: 'Git', link: '/tools/git' },
-      { text: 'PNPM', link: '/tools/pnpm' }
+      { text: 'PNPM', link: '/tools/pnpm' },
+      { text: 'Flutter', link: '/tools/flutter' }
     ],
     sidebar: {
       '/tools/': [
@@ -25,7 +26,8 @@ export default defineConfig({
         { text: 'Docker', link: '/tools/docker' },
         { text: 'NVM', link: '/tools/nvm' },
         { text: 'Git', link: '/tools/git' },
-        { text: 'PNPM', link: '/tools/pnpm' }
+        { text: 'PNPM', link: '/tools/pnpm' },
+        { text: 'Flutter', link: '/tools/flutter' }
       ],
       '/': [
         {
