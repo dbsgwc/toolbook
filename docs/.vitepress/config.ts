@@ -13,25 +13,50 @@ export default defineConfig({
     nav: [
       { text: '首页', link: '/' },
       { text: '技术选型', link: '/guide/stack' },
-      { text: 'PM2', link: '/tools/pm2' },
-      { text: 'Docker', link: '/tools/docker' },
-      { text: 'Nginx', link: '/tools/nginx' },
-      { text: '密码生成', link: '/tools/password' },
-      { text: 'NVM', link: '/tools/nvm' },
-      { text: 'Git', link: '/tools/git' },
-      { text: 'PNPM', link: '/tools/pnpm' },
-      { text: 'Flutter', link: '/tools/flutter' }
+      {
+        text: '工具箱',
+        items: [
+          { text: 'PM2', link: '/tools/pm2' },
+          { text: 'Docker', link: '/tools/docker' },
+          { text: 'Nginx', link: '/tools/nginx' },
+          { text: 'NVM', link: '/tools/nvm' },
+          { text: 'Git', link: '/tools/git' },
+          { text: 'PNPM', link: '/tools/pnpm' },
+          { text: 'Flutter', link: '/tools/flutter' },
+          { text: '密码生成', link: '/tools/password' }
+        ]
+      }
     ],
     sidebar: {
       '/tools/': [
-        { text: 'PM2', link: '/tools/pm2' },
-        { text: 'Docker', link: '/tools/docker' },
-        { text: 'Nginx', link: '/tools/nginx' },
-        { text: '密码生成', link: '/tools/password' },
-        { text: 'NVM', link: '/tools/nvm' },
-        { text: 'Git', link: '/tools/git' },
-        { text: 'PNPM', link: '/tools/pnpm' },
-        { text: 'Flutter', link: '/tools/flutter' }
+        {
+          text: '环境与包管理',
+          items: [
+            { text: 'NVM', link: '/tools/nvm' },
+            { text: 'PNPM', link: '/tools/pnpm' }
+          ]
+        },
+        {
+          text: '部署与运维',
+          items: [
+            { text: 'PM2', link: '/tools/pm2' },
+            { text: 'Docker', link: '/tools/docker' },
+            { text: 'Nginx', link: '/tools/nginx' }
+          ]
+        },
+        {
+          text: '开发工具',
+          items: [
+            { text: 'Git', link: '/tools/git' },
+            { text: 'Flutter', link: '/tools/flutter' }
+          ]
+        },
+        {
+          text: '实用小工具',
+          items: [
+            { text: '密码生成', link: '/tools/password' }
+          ]
+        }
       ],
       '/': [
         {
