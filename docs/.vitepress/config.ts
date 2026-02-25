@@ -15,6 +15,8 @@ export default defineConfig({
       { text: '技术选型', link: '/guide/stack' },
       { text: 'PM2', link: '/tools/pm2' },
       { text: 'Docker', link: '/tools/docker' },
+      { text: 'Nginx', link: '/tools/nginx' },
+      { text: '密码生成', link: '/tools/password' },
       { text: 'NVM', link: '/tools/nvm' },
       { text: 'Git', link: '/tools/git' },
       { text: 'PNPM', link: '/tools/pnpm' },
@@ -24,6 +26,8 @@ export default defineConfig({
       '/tools/': [
         { text: 'PM2', link: '/tools/pm2' },
         { text: 'Docker', link: '/tools/docker' },
+        { text: 'Nginx', link: '/tools/nginx' },
+        { text: '密码生成', link: '/tools/password' },
         { text: 'NVM', link: '/tools/nvm' },
         { text: 'Git', link: '/tools/git' },
         { text: 'PNPM', link: '/tools/pnpm' },
